@@ -1,0 +1,42 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package bloodrequest;
+import javax.swing.JOptionPane;
+
+public class BloodRequest {
+
+    public static void checkRequestedQuantity() {
+        String input = JOptionPane.showInputDialog("Enter the requested quantity:");
+        int requestedQuantity = Integer.parseInt(input);
+
+        if (requestedQuantity > 0) {
+            JOptionPane.showMessageDialog(null, "Valid requested quantity: " + requestedQuantity + " units.");
+        } else {
+            JOptionPane.showMessageDialog(null, "Error: Requested quantity must be greater than zero!", "Input Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    public static void checkAvailability() {
+        String reqInput = JOptionPane.showInputDialog("Enter the requested quantity:");
+        int requestedQuantity = Integer.parseInt(reqInput);
+
+        String stockInput = JOptionPane.showInputDialog("Enter the available stock quantity:");
+        int availableStock = Integer.parseInt(stockInput);
+
+        if (requestedQuantity <= availableStock) {
+            JOptionPane.showMessageDialog(null, "Request approved: Quantity is available in stock.");
+        } else {
+            JOptionPane.showMessageDialog(null, "Warning: Requested quantity exceeds available stock!", "Stock Alert", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
+    public static void main(String[] args) {
+        JOptionPane.showMessageDialog(null, "Testing Condition 1: Quantity Validation");
+        checkRequestedQuantity();
+
+        JOptionPane.showMessageDialog(null, "Testing Condition 2: Stock Availability");
+        checkAvailability();
+    }
+}
