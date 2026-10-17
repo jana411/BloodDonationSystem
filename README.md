@@ -12,10 +12,10 @@ The system uses conditions and decision-making statements to validate informatio
 
 | Student | Class Name | Responsibility |
 |---|---|---|
-| Student 1 | Donor | Manage donor information and validation |
-| Student 2 | BloodDonation | Manage blood donation processes |
-| Student 3 | BloodInventory | Manage blood inventory |
-| Student 4 | BloodRequest | Manage blood requests |
+| Jana | Donor | Manage donor information and validation |
+|  | Farah | Manage blood donation processes |
+| Alanoud | BloodInventory | Manage blood inventory |
+| Nora | BloodRequest | Manage blood requests |
 
 ### 3. Class Attributes and Methods
 
