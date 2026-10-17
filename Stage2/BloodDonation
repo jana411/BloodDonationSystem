@@ -1,0 +1,34 @@
+package com.mycompany.blooddonation2;
+import javax.swing.JOptionPane;
+public class BloodDonation2 {
+    double donationAmount;
+    String donationStatus;
+
+    public BloodDonation2(double donationAmount) {
+        this.donationAmount = donationAmount;
+        if (donationAmount > 0 && donationAmount <= 1)
+            donationStatus = "Completed";
+        else
+            donationStatus = "Not Completed";
+    }
+    public void checkDonationAmount() {
+        if (donationAmount > 0 && donationAmount <= 1)
+            JOptionPane.showMessageDialog(null, "Valid amount");
+        else
+            JOptionPane.showMessageDialog(null, "Invalid amount");
+    }
+    public void checkDonationStatus() {
+        if (donationStatus.equals("Completed"))
+            JOptionPane.showMessageDialog(null, "Donation completed");
+        else
+            JOptionPane.showMessageDialog(null, "Donation not completed");
+    }
+    public static void main(String[] args) {
+        double amount = Double.parseDouble(
+            JOptionPane.showInputDialog("Enter blood amount:")
+        );
+        BloodDonation2 d = new BloodDonation2(amount);
+        d.checkDonationAmount();
+        d.checkDonationStatus();
+    }
+}
