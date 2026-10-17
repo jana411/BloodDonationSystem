@@ -13,7 +13,7 @@ The system uses conditions and decision-making statements to validate informatio
 | Student | Class Name | Responsibility |
 |---|---|---|
 | Jana | Donor | Manage donor information and validation |
-|  | Farah | Manage blood donation processes |
+|Farah | BloodDonation |Manage blood donation processes |
 | Alanoud | BloodInventory | Manage blood inventory |
 | Nora | BloodRequest | Manage blood requests |
 
