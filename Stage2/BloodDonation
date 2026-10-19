@@ -1,10 +1,13 @@
 package com.mycompany.blooddonation2;
 import javax.swing.JOptionPane;
 public class BloodDonation2 {
+    int donationId;
+    String donationDate;
     double donationAmount;
     String donationStatus;
-
-    public BloodDonation2(double donationAmount) {
+    public BloodDonation2(int donationId, String donationDate, double donationAmount) {
+        this.donationId = donationId;
+        this.donationDate = donationDate;
         this.donationAmount = donationAmount;
         if (donationAmount > 0 && donationAmount <= 1)
             donationStatus = "Completed";
@@ -27,7 +30,7 @@ public class BloodDonation2 {
         double amount = Double.parseDouble(
             JOptionPane.showInputDialog("Enter blood amount:")
         );
-        BloodDonation2 d = new BloodDonation2(amount);
+        BloodDonation2 d = new BloodDonation2(101, "2026-10-19", amount);
         d.checkDonationAmount();
         d.checkDonationStatus();
     }
